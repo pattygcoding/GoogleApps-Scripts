@@ -1,0 +1,40 @@
+function compareColumns(column1, column2, sheetName, includeTimestamps) {
+  // Set default sheet name to "Sheet1" if not provided
+  sheetName = sheetName || "Sheet1";
+
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(sheetName);
+  if (!sheet) {
+    return "Sheet not found";
+  }
+  
+  var lastRow = sheet.getLastRow();
+  var columnData1 = sheet.getRange(1, column1, lastRow).getValues();
+  var columnData2 = sheet.getRange(1, column2, lastRow).getValues();
+  var differences = [];
+  
+  for (var i = 0; i < lastRow; i++) {
+    if (!includeTimestamps && isTimestamp(columnData1[i][0]) && isTimestamp(columnData2[i][0])) {
+      continue; // Skip comparison if both are timestamps and includeTimestamps is FALSE
+    }
+
+    if (includeTimestamps && !isTimestamp(columnData1[i][0]) && !isTimestamp(columnData2[i][0])) {
+      continue; // Skip comparison if neither are timestamps and includeTimestamps is TRUE
+    }
+    
+    if (columnData1[i][0] !== columnData2[i][0]) {
+      differences.push("Row " + (i + 1) + ": " + columnData1[i][0] + " vs " + columnData2[i][0]);
+    }
+  }
+  
+  if (differences.length === 0) {
+    return "No differences";
+  } else {
+    return differences.join(", ");
+  }
+}
+
+// Function to check if a value is a timestamp
+function isTimestamp(value) {
+  var timestampPattern = /^[A-Za-z]{3} [A-Za-z]{3} \d{2} \d{4} \d{2}:\d{2}:\d{2} GMT[+-]\d{4} \(GMT[+-]\d{2}:\d{2}\)$/;
+  return timestampPattern.test(value);
+}
