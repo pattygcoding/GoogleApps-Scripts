@@ -1,4 +1,4 @@
-function compareRows(sheetName, row1, row2) {
+function compareRows(sheetName = "Sheet1", row1, row2) {
     var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(sheetName);
     var rowData1 = sheet.getRange(row1, 1, 1, sheet.getLastColumn()).getValues()[0];
     var rowData2 = sheet.getRange(row2, 1, 1, sheet.getLastColumn()).getValues()[0];
