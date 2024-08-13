@@ -1,6 +1,9 @@
 # Google Apps Scripts by Patrick Goodwin
 A collection of Google Apps Scripts I use, especially on Google Sheets to compare SQL outputs when Microsoft SQL server can't do it for me.
 
+## Table of Contents
+- [Compare Rows](#compare-rows)
+
 ## Compare Rows
 Compares 2 rows and returns the differences.
 
