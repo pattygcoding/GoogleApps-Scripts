@@ -6,7 +6,11 @@ function compareColumns(column1, column2, sheetName, includeTimestamps) {
   if (!sheet) {
     return "Sheet not found";
   }
-  
+
+  // Convert column letters to numbers
+  column1 = letterToColumn(column1);
+  column2 = letterToColumn(column2);
+
   var lastRow = sheet.getLastRow();
   var columnData1 = sheet.getRange(1, column1, lastRow).getValues();
   var columnData2 = sheet.getRange(1, column2, lastRow).getValues();
@@ -31,6 +35,15 @@ function compareColumns(column1, column2, sheetName, includeTimestamps) {
   } else {
     return differences.join(", ");
   }
+}
+
+// Function to convert column letter to number
+function letterToColumn(letter) {
+  var column = 0, length = letter.length;
+  for (var i = 0; i < length; i++) {
+    column += (letter.charCodeAt(i) - 64) * Math.pow(26, length - 1 - i);
+  }
+  return column;
 }
 
 // Function to check if a value is a timestamp
