@@ -13,7 +13,7 @@ Compares 2 rows and returns the differences.
 - `sheetName`: the name of the sheet (defualt: "Sheet1")
 - `includeTimestamps`: Displays timestamp differences if TRUE
 
-### Example:
+### Examples:
 ```
 =compareRows(2, 3)
 =compareRows(2, 3, "Sheet2")
