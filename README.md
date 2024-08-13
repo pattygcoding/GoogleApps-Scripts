@@ -1,0 +1,15 @@
+# Google Apps Scripts by Patrick Goodwin
+A collection of Google Apps Scripts I use, especially on Google Sheets to compare SQL outputs when Microsoft SQL server can't do it for me.
+
+## Compare Rows
+Compares 2 rows and returns the differences.
+
+### Parameters
+`sheetName`: the name of the sheet (defualt: "Sheet1")
+`row1`: The number of the first row to compare.
+`row2`: The number of the second row to compare.
+
+### Example:
+```
+=compareRows(2, 3)
+```
