@@ -1,6 +1,8 @@
 # Google Apps Scripts by Patrick Goodwin
 A collection of Google Apps Scripts I use, especially on Google Sheets to compare SQL outputs when Microsoft SQL server can't do it for me.
 
+To use these on Google Sheets, go to the Extensions -> Apps Script and paste your code.
+
 ## Table of Contents
 - [Compare Columns](#compare-columns)
 - [Compare Rows](#compare-rows)
