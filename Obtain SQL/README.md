@@ -1,12 +1,12 @@
-## Obtain SQL
+# Obtain SQL
 Obtains the SQL format for a header and value row.
 
-### Parameters
+## Parameters
 - `headerRow`: The number of the first row to compare.
 - `valueRow`: The number of the second row to compare.
 - `sheet`: the name of the sheet (defualt: "Sheet1")
 
-### Examples:
+## Examples:
 ```
 =obtainSQL(2, 3)
 =obtainSQL(2, 3, "Sheet2")
