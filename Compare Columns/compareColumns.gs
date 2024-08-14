@@ -1,8 +1,7 @@
-function compareColumns(column1, column2, sheetName, includeTimestamps) {
+function compareColumns(column1, column2, sheet, includeTimestamps) {
   // Set default sheet name to "Sheet1" if not provided
-  sheetName = sheetName || "Sheet1";
+  sheet = sheet || SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
 
-  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(sheetName);
   if (!sheet) {
     return "Sheet not found";
   }
