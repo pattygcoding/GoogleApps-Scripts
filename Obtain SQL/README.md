@@ -4,7 +4,7 @@ Obtains the SQL format for a header and value row.
 ## Parameters
 - `headerRow`: The number of the first row to compare.
 - `valueRow`: The number of the second row to compare.
-- `sheet`: the name of the sheet (defualt: "Sheet1")
+- `sheet`: the name of the sheet (defualt: your current sheet)
 
 ## Examples:
 ```
