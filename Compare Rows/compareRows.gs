@@ -27,7 +27,7 @@ function compareRows(row1, row2, sheet, includeTimestamps) {
   if (differences.length === 0) {
     return "No differences";
   } else {
-    return differences.join(", ");
+    return differences.join("\n");
   }
 }
 
