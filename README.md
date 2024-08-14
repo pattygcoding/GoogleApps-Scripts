@@ -6,6 +6,7 @@ To use these on Google Sheets, go to the Extensions -> Apps Script and paste you
 ## Table of Contents
 - [Compare Columns](#compare-columns)
 - [Compare Rows](#compare-rows)
+- [Obtain SQL](#obtain-sql)
 
 ## Compare Columns
 Compares 2 columns and returns the differences.
@@ -13,7 +14,7 @@ Compares 2 columns and returns the differences.
 ### Parameters
 - `column1`: The number of the first row to compare - must be in string format.
 - `column2`: The number of the second row to compare- must be in string format.
-- `sheetName`: the name of the sheet (defualt: "Sheet1")
+- `sheet`: the name of the sheet (defualt: "Sheet1")
 - `includeTimestamps`: Displays timestamp differences if TRUE
 
 ### Examples:
@@ -30,7 +31,7 @@ Compares 2 rows and returns the differences.
 ### Parameters
 - `row1`: The number of the first row to compare.
 - `row2`: The number of the second row to compare.
-- `sheetName`: the name of the sheet (defualt: "Sheet1")
+- `sheet`: the name of the sheet (defualt: "Sheet1")
 - `includeTimestamps`: Displays timestamp differences if TRUE
 
 ### Examples:
@@ -39,4 +40,18 @@ Compares 2 rows and returns the differences.
 =compareRows(2, 3, "Sheet2")
 =compareRows(2, 3, , TRUE)
 =compareRows(2, 3, "Sheet2", TRUE)
+```
+
+## Obtain SQL
+Obtains the SQL format for a header and value row.
+
+### Parameters
+- `headerRow`: The number of the first row to compare.
+- `valueRow`: The number of the second row to compare.
+- `sheet`: the name of the sheet (defualt: "Sheet1")
+
+### Examples:
+```
+=obtainSQL(2, 3)
+=obtainSQL(2, 3, "Sheet2")
 ```
