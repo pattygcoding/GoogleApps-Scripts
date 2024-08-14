@@ -16,6 +16,6 @@ function obtainSql(headerRow, valueRow, sheet) {
     }
   }
   
-  // Join the parts with a comma and return the resulting string
-  return sqlParts.join(", ");
+  // Join the parts with a comma and newline and return the resulting string
+  return sqlParts.join(",\n");
 }
