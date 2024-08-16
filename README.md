@@ -3,6 +3,8 @@ A collection of Google Apps Scripts I use, especially on Google Sheets to compar
 
 To use these on Google Sheets, go to the Extensions -> Apps Script and paste your code.
 
+**Experimental OfficeScript Files:** The TypeScript files are experimental and for OfficeScript. The .gs files are the correct files to use
+
 ## Table of Contents
 - [Compare Columns](#compare-columns)
 - [Compare Rows](#compare-rows)
