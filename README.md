@@ -1,7 +1,17 @@
-# Google Apps Scripts by Patrick Goodwin
+# Spreadsheet Scripts by Patrick Goodwin
 A collection of Scripts I use, especially on Google Sheets to compare SQL outputs when Microsoft SQL server can't do it for me.
 
-To use these on Google Sheets, go to the Extensions -> Apps Script and paste your code.
+## Programming Languages Used:
+- **Google Apps Script** (superset of JavaScript)
+- **Office Script** (superset of TypeScript... and I guess JavaScript as well)
+- **VBA** - also known as Microsoft Visual Basic Application
+
+## To use on Google Sheets, go to the Extensions -> Apps Script and paste your code.
+
+## To use in Excel:
+1. Open Excel, and click Alt + F11 to open the VBA editor.
+2. Copy & paste the code
+3. Save as "Module1", "Module2", "Module3" and so on.
 
 **Experimental OfficeScript Files:** The TypeScript files are experimental and for OfficeScript. The .gs (Google Sheets) and .vba (Excel) files are the correct files to use
 
