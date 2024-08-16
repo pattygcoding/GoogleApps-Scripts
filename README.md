@@ -1,9 +1,9 @@
 # Google Apps Scripts by Patrick Goodwin
-A collection of Google Apps Scripts I use, especially on Google Sheets to compare SQL outputs when Microsoft SQL server can't do it for me.
+A collection of Scripts I use, especially on Google Sheets to compare SQL outputs when Microsoft SQL server can't do it for me.
 
 To use these on Google Sheets, go to the Extensions -> Apps Script and paste your code.
 
-**Experimental OfficeScript Files:** The TypeScript files are experimental and for OfficeScript. The .gs files are the correct files to use
+**Experimental OfficeScript Files:** The TypeScript files are experimental and for OfficeScript. The .gs (Google Sheets) and .vba (Excel) files are the correct files to use
 
 ## Table of Contents
 - [Compare Columns](#compare-columns)
